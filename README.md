@@ -13,7 +13,7 @@ This script automates a full pick-and-place sorting cycle on a Niryo robotic arm
 ---
 
 <!-- Add a photo of the full station here (robot + conveyor + drop zones) -->
-![Station overview](station.jpg)
+![Ned2 Kit](nyr.jpg)
 
 ---
 
@@ -33,20 +33,13 @@ The robot scans a second workspace where parts can be placed manually. It keeps 
 Phase 4 — Final ramp drop
 Once the bundle workspace is empty, the robot performs two final picks from two defined poses and deposits both parts on a ramp, then returns to the wait pose.
 
----
-
-<!-- Add a photo or short gif of the sorting cycle here -->
-![Sorting cycle](sorting.jpg)
-
----
-
 ## Project structure
 
 ```
 niryo-sorting/
 │
-├── main.py          # Full pipeline: load, sort conveyor, sort bundle, final drop
-├── config.py        # All poses, thresholds, and parameters (optional refactor)
+├── main.py          
+├── config.py        
 └── README.md
 ```
 
@@ -63,12 +56,7 @@ niryo-sorting/
 - One grid palette for circles (2 columns, 4 rows)
 - One final ramp drop zone
 
----
 
-<!-- Add a labeled hardware photo here -->
-![Hardware layout](hardware.jpg)
-
----
 
 ## Setup
 
@@ -81,7 +69,7 @@ pip install pyniryo
 Edit the configuration at the top of main.py to match your station:
 
 ```python
-ROBOT_IP       = "10.10.10.10"       # IP of your Niryo robot
+ROBOT_IP       = "10.10.10.10"       
 CONVEYOR_ID    = ConveyorID.ID_1
 CONVEYOR_SPEED = 30
 IR_PIN         = PinID.DI5
